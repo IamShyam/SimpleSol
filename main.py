@@ -15,7 +15,10 @@ import numpy as np
 from vpython import *
 from simulation import *
 
-print("Enter the details of the host star:")
+print("\nNOTE: The length details entered will be converted into AU for the",
+        "simulation.")
+
+print("\nEnter the details of the host star:")
 s_mass = np.float(input("Mass (kg): "))
 
 print("\nEnter the attributes of the planet wrt the star:")
