@@ -27,13 +27,19 @@ class SpaceObj(object):
     """
     Class used for the input of the attributes of the celestial object
 
-    Parameters:
-    mass: mass of the celestial object (kilograms)
-    rad: radius of the object (metres)
-    vel: velocity of the object at the periapsis of its orbit (meters/second)
-    dist: distance between the object and the object it's orbitng (metres)
+    Parameters
+    ----------
+    mass = float
+        Mass of the celestial object (kilograms)
+    rad = float
+        Radius of the object (metres)
+    vel = float
+        Velocity of the object at the periapsis of its orbit (meters/second)
+    dist = float
+        Distance between the object and the object it's orbitng (metres)
 
-    Returns:
+    Returns
+    -------
     A SpaceObj object with altered scaled values for simulation
     """
 
@@ -62,12 +68,15 @@ def gravforce(body1, body2):
     Helper Function to find the force vector using the Universal Gravitational 
     Law
 
-    Parameters:
-    body1, body2: initialised vpython sphere objects
+    Parameters
+    ----------
+    body1, body2 = vpython sphere object
+        Initialised vpython sphere objects
 
-    Returns:
-    force_vec: a resultant force vector with direction in the form of vpython 
-    vectors
+    Returns
+    -------
+    force_vec = vpython vector
+        A resultant force vector with direction in the form of vpython vectors
     """
 
     dist_vec = (body1.pos - body2.pos)
@@ -85,12 +94,15 @@ def graphsphere(body, color):
     """
     Helper Function to initiate the graphical classes
     
-    Parameters:
-    body: An object of the SpaceObj Class defined
-    color: a color defined by the palette in vpython
-    trail: gives out trails of motion in the simulation; defaultly set as True
+    Parameters
+    ----------
+    body = SpaceObj object
+        An object of the SpaceObj Class defined
+    color = vpython attribute
+        A color defined by the palette in vpython
 
-    Returns:
+    Returns
+    ----------
     A vpython sphere object with attributes: pos, radius, momentum, mass, 
     color
     """
@@ -110,12 +122,17 @@ def simulate(S, P, M):
     The main simulate function of the entire program. Simulates the 3 body 
     system in the default web-browser using the vpython package
 
-    Parameters:
-    S: The Star object from the SpaceObj Class
-    P: The Planet object from the SpaceObj Class
-    M: The Moon object of the SpaceObj Class
+    Parameters
+    ----------
+    S = SpaceObj object
+        The Star object from the SpaceObj Class
+    P = SpaceObj object
+        The Planet object from the SpaceObj Class
+    M = SpaceObj object
+        The Moon object of the SpaceObj Class
 
-    Returns:
+    Returns
+    ----------
     Nothing
     """
     
